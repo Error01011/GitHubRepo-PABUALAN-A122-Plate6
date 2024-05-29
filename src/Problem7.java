@@ -20,8 +20,8 @@ public class Problem7 {
                 graph.addEdge(u, v);
                 incidenceMatrix[u][i+j] = 1;
                 incidenceMatrix[v][i+j] = 1;
-                if(j>=1) i++;
             }
+            if(count>=1) i+=count-1;
         }
         for(int[] rows: incidenceMatrix){
             System.out.println(Arrays.toString(rows));

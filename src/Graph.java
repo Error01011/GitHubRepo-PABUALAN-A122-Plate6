@@ -37,9 +37,7 @@ public class Graph {
         for(int child: edges[v]){
             if(!visited[child]){
                 dfs(child, v);
-            } else if(!isDirected && child!=parent){
-                isCycle= true;
-            } else if(isDirected && recStack[child]){
+            } else if(recStack[child] && parent!=child){
                 isCycle= true;
             }
         }
