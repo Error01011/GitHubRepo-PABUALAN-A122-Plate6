@@ -20,7 +20,7 @@ public class Problem8 {
             }
         }
         //Checks if they have similar vertices, and amount of edges
-        if((graphs[0].getVertices()!=graphs[0].getVertices()) || graphs[0].getConnnectedComponents() != graphs[1].getConnnectedComponents()
+        if((graphs[0].getVertices()!=graphs[0].getVertices()) || graphs[0].getConnectedComponents() != graphs[1].getConnectedComponents()
                 || edges[0]!=edges[1]){
             System.out.println("The two graphs provided are not isomorphic");
             return;
