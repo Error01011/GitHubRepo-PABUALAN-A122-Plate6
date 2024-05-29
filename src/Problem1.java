@@ -1,4 +1,3 @@
-import java.util.LinkedList;
 import java.util.Scanner;
 
 public class Problem1 {
@@ -17,7 +16,7 @@ public class Problem1 {
         if(graph.isConnected()){
             System.out.println("The graph is connected!");
         } else {
-            System.out.println("The graph is not connected but there are "+graph.getConnnectedComponents()+" connected components");
+            System.out.println("The graph is not connected but there are "+graph.getConnectedComponents()+" connected components");
         }
     }
 }

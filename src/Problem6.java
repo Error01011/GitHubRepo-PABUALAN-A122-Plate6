@@ -19,7 +19,7 @@ public class Problem6 {
         int[][] adjMatrix = new int[vertices][vertices];
         for(int i=0;i<vertices;i++){
             for(int child:graph.getEdges()[i]){
-                System.out.println("Childrens: "+graph.getEdges()[i]);
+                System.out.println("Children: "+graph.getEdges()[i]);
                 System.out.println("Row: "+i+", Column: "+child+", Value: "+adjMatrix[i][child]);
                 adjMatrix[i][child]+=1;
             }

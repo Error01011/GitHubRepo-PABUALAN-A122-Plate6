@@ -2,10 +2,10 @@ import java.util.*;
 
 public class Graph {
     private final int vertices;
-    private LinkedList<Integer>[] edges;
+    private final LinkedList<Integer>[] edges;
     private boolean[] visited;
-    private boolean[] recStack;
-    private boolean isDirected;
+    private final boolean[] recStack;
+    private final boolean isDirected;
     private boolean isCycle;
     private boolean isBipartite;
 
@@ -17,7 +17,7 @@ public class Graph {
         visited = new boolean[vertices];
         recStack = new boolean[vertices];
         for(int i = 0; i<vertices;i++){
-            edges[i] = new LinkedList<Integer>();
+            edges[i] = new LinkedList<>();
         }
     }
     public void addEdge(int a, int b){
@@ -75,8 +75,8 @@ public class Graph {
     }
 
     public boolean isAllVisited(){
-        for(int i=0; i<visited.length;i++){
-            if(!visited[i]) return false;
+        for (boolean b : visited) {
+            if (!b) return false;
         }
         return true;
     }
@@ -86,7 +86,7 @@ public class Graph {
         }
         return -1;
     }
-    public int getConnnectedComponents(){
+    public int getConnectedComponents(){
         visited = new boolean[vertices];
         int con = 0;
         for(int i=0;i<visited.length;i++){
